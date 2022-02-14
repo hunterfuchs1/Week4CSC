@@ -16,33 +16,33 @@ namespace Week3.Controllers
             double sum = 0;
             double counter = 0;
             double mean = 0;
-           
+
 
             lint.Sort();
             foreach (int i in lint)
             {
-                //if (counter == 0)
-                //{
-                //    slist.Add("List to small");
-                //    counter++;
-                //}
-                //else
-                //{
+                if (counter == 0) { 
+                
+                    slist.Add("List to small");
                     counter++;
+                }
+                
+                    Console.WriteLine(i);
+                //LogObject(i); Wont compile with this
+                    counter++;                 
                     sum += i;
                     mean = sum / counter;
 
                     slist.Add(counter + ": Current mean: " + mean);
-                //}
+                   
             }
             Console.WriteLine("Sum: " + sum);
-
             return slist;
         }
 
-
-
-
-
+        //public void LogObject(int i)
+        //{
+        //    Console.WriteLine(i);
+        //}
     }
 }
